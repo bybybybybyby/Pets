@@ -56,6 +56,7 @@ public class EditorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_editor);
 
         // Find all relevant views that we will need to read user input from
+
         mNameEditText = (EditText) findViewById(R.id.edit_pet_name);
         mBreedEditText = (EditText) findViewById(R.id.edit_pet_breed);
         mWeightEditText = (EditText) findViewById(R.id.edit_pet_weight);
@@ -106,9 +107,9 @@ public class EditorActivity extends AppCompatActivity {
     // Get user input from editor and save new pet into database.
     private void insertPet() {
         String nameString = mNameEditText.getText().toString().trim();
-        String breedString = mBreedEditText.getText().toString().trim();
-        int weightInt = Integer.parseInt(mWeightEditText.getText().toString().trim());
-        mGender = Integer.parseInt(mGenderSpinner.getSelectedItem().toString());
+//        String breedString = mBreedEditText.getText().toString().trim();
+//       int weightInt = Integer.parseInt(mWeightEditText.getText().toString().trim());
+//        mGender = Integer.parseInt(mGenderSpinner.getSelectedItem().toString());
 
     }
 
