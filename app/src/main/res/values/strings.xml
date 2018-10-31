@@ -58,11 +58,40 @@
 
     <!-- Label for dropdown menu option if the pet is female [CHAR LIMIT=20] -->
     <string name="gender_female">Female</string>
+
     <string name="editor_insert_pet_failed">Fail:  Pet not added</string>
+
     <string name="editor_insert_pet_successful">Pet Added!</string>
-    <string name="empty_view_title_text">It\\\'s a bit lonely here...</string>
+
+    <string name="empty_view_title_text">It\\\'s a bit lonely here.</string>
+
     <string name="empty_view_subtitle_text">Get started by adding a pet</string>
+
     <string name="editor_activity_title_edit_pet">Edit Pet</string>
+
     <string name="editor_update_pet_failed">Failed: Pet not updated</string>
+
     <string name="editor_update_pet_successful">Update successful</string>
+
+    <string name="unsaved_changes_dialog_msg">Discard any changes?</string>
+
+    <string name="discard">Discard</string>
+
+    <string name="keep_editing">Keep Editing</string>
+
+    <!-- Toast message in editor when current pet was successfully deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_pet_successful">Pet deleted</string>
+
+    <!-- Toast message in editor when current pet has failed to be deleted [CHAR LIMIT=NONE] -->
+    <string name="editor_delete_pet_failed">Error with deleting pet</string>
+
+    <!-- Dialog message to ask the user to confirm deleting the current pet [CHAR LIMIT=NONE] -->
+    <string name="delete_dialog_msg">Delete this pet?</string>
+
+    <!-- Dialog button text for the option to confirm deleting the current pet [CHAR LIMIT=20] -->
+    <string name="delete">Delete</string>
+
+    <!-- Dialog button text for the option to cancel deletion of the current pet [CHAR LIMIT=20] -->
+    <string name="cancel">Cancel</string>
+    <string name="unknown_breed">Unknown breed</string>
 </resources>

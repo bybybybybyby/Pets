@@ -16,11 +16,13 @@ import android.support.design.widget.FloatingActionButton;
 //import android.support.v4.content.CursorLoader;
 
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 import com.example.android.pets.data.PetContract.PetEntry;
@@ -123,7 +125,7 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
                 return true;
             // Respond to a click on the "Delete all entries" menu option
             case R.id.action_delete_all_entries:
-                // Do nothing for now
+                deleteAllPets();
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -157,6 +159,14 @@ public class CatalogActivity extends AppCompatActivity implements LoaderManager.
     public void onLoaderReset(Loader<Cursor> loader) {
         // Callback called when the data needs to be deleted
         mCursorAdapter.swapCursor(null);
+    }
 
+    public void deleteAllPets() {
+        int rowsDeleted = getContentResolver().delete(PetEntry.CONTENT_URI, null, null);
+        Log.v("!!!ROWS DELETED", String.valueOf(rowsDeleted));
+        if (rowsDeleted > 0) {
+            Toast.makeText(this, "Deletion completed", Toast.LENGTH_SHORT).show();
+        } else
+            Toast.makeText(this, "Failed deletion", Toast.LENGTH_SHORT).show();
     }
 }
